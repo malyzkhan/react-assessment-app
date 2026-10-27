@@ -86,10 +86,6 @@ router.post("/", adminAuth, async (req, res) => {
 });
 
 
-/**
- * POST /api/products/purchase/:id
- * Purchase one unit if stock is available.
- */
 router.post("/purchase/:id", async (req, res) => {
   try {
     const product = await Product.findOneAndUpdate(
